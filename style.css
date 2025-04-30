@@ -1,0 +1,122 @@
+:root {
+  --main-color: #0891b2;
+  --heading-color: #000;
+  --text-color: rgb(85, 85, 85);
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+  background-image: linear-gradient(165deg, var(--main-color) 50%, #ffffff 50%);
+  background-repeat: no-repeat;
+}
+
+header {
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--main-color);
+  color: #ffffff;
+}
+
+footer h2,
+footer p {
+  color: #ffffff;
+}
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+h1 {
+  color: #ffffff;
+  position: absolute;
+  margin: 0;
+}
+
+h2 {
+  color: var(--heading-color);
+}
+
+footer address,
+footer a {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+address {
+  font-style: normal;
+  margin: 24px 0;
+}
+
+p {
+  margin: 0 0 8px 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: linear-gradient(
+      150deg,
+      var(--main-color) 50%,
+      #ffffff 50%
+    );
+    background-size: 100% 80%;
+  }
+  .container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  header.container {
+    margin-top: 24px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+  }
+
+  footer {
+    padding-top: 24px;
+  }
+
+  h1 {
+    font-size: 56px;
+    bottom: 0;
+    margin: 8px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    margin: 0 0 8px 0;
+  }
+
+  footer address,
+  footer a {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+}
