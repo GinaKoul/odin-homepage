@@ -10,7 +10,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.5;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,47 +20,40 @@ body {
   background-repeat: no-repeat;
 }
 
+/*Header*/
+
 header {
   position: relative;
 }
 
-footer {
-  width: 100%;
-  background-color: var(--main-color);
-  color: #ffffff;
+/*General*/
+
+.container {
+  max-width: 1190px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
-footer h2,
-footer p {
-  color: #ffffff;
+.hero-left {
+  position: relative;
 }
+
 h1,
 h2,
 h3 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
+  margin: 0;
 }
 
 h1 {
   color: #ffffff;
   position: absolute;
-  margin: 0;
 }
 
 h2,
 h3 {
   color: var(--heading-color);
-}
-
-footer address,
-footer a {
-  font-size: 14px;
-  color: #ffffff;
-}
-
-address {
-  font-style: normal;
-  margin: 24px 0;
 }
 
 p {
@@ -72,27 +65,10 @@ img {
   object-fit: cover;
 }
 
-.container {
-  max-width: 1180px;
-}
+/*Cards*/
 
-footer .container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.social svg {
-  width: 24px;
-  height: 24px;
-}
-
-main .social {
-  float: right;
-}
-
-.contact svg {
-  width: 14px;
-  height: 14px;
+.cards-outer {
+  margin-top: 96px;
 }
 
 .cards {
@@ -100,7 +76,18 @@ main .social {
 }
 
 .card {
+  padding-bottom: 64px;
   box-shadow: 0 4px 8px #bdbdbd;
+}
+
+.card h3 {
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.card p {
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .img-placeholder {
@@ -118,7 +105,6 @@ main .social {
   position: absolute;
   color: #fff;
   font-family: "Playfair Display", serif;
-  font-size: 48px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -126,8 +112,6 @@ main .social {
 }
 
 .img-placeholder img {
-  width: 100%;
-  object-fit: cover;
   z-index: 2;
 }
 
@@ -160,6 +144,47 @@ main .social {
   height: 24px;
 }
 
+/*Footer*/
+
+footer {
+  width: 100%;
+  background-color: var(--main-color);
+  color: #ffffff;
+  margin-top: 126px;
+}
+
+footer .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+footer h2,
+footer p {
+  color: #ffffff;
+}
+
+footer address,
+footer a {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+address {
+  font-style: normal;
+  margin: 24px 0;
+}
+
+.contact a svg {
+  margin-right: 8px;
+}
+
+.social svg {
+  width: 24px;
+  height: 24px;
+}
+
 @media (max-width: 500px) {
   body {
     background-image: linear-gradient(
@@ -167,18 +192,14 @@ main .social {
       var(--main-color) 50%,
       #ffffff 50%
     );
-    background-size: 100% 80%;
-  }
-  .container {
-    margin-left: 16px;
-    margin-right: 16px;
+    background-size: 100% 34em;
   }
 
   header.container {
-    margin-top: 24px;
-    margin-right: 24px;
-    margin-bottom: 24px;
-    margin-left: 24px;
+    margin-top: 32px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    margin-left: 32px;
   }
 
   .cards {
@@ -199,15 +220,32 @@ main .social {
   h2 {
     text-align: center;
     font-size: 32px;
-    margin: 0 0 8px 0;
+    margin: 0 0 16px 0;
   }
   h3 {
     font-size: 18px;
   }
 
+  .img-placeholder {
+    height: 220px;
+  }
+
+  .img-placeholder span {
+    font-size: 32px;
+  }
+
+  footer h2 {
+    margin-bottom: 8px;
+  }
+
   footer address,
   footer a {
     font-size: 14px;
+  }
+
+  address {
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   footer p {
@@ -220,22 +258,110 @@ main .social {
 }
 
 @media (min-width: 501px) and (max-width: 1000px) {
+  .container {
+    max-width: 700px;
+  }
   h1 {
     font-size: 56px;
   }
   h2 {
     font-size: 40px;
   }
+  h3 {
+    font-size: 20px;
+  }
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 48px;
     row-gap: 56px;
   }
+
+  .img-placeholder {
+    height: 240px;
+  }
+
+  .img-placeholder span {
+    font-size: 40px;
+  }
+
+  footer,
+  footer address,
+  .contact a {
+    font-size: 18px;
+  }
+
+  .contact {
+    padding-top: 54px;
+    padding-bottom: 64px;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-info {
+    flex: 0 0 50%;
+  }
+
+  .contact img {
+    flex: 0 0 50%;
+  }
+
+  .contact svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  footer .social {
+    margin-top: 32px;
+  }
+
+  footer .social svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 501px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .hero-right {
+    background-color: #fff;
+  }
+
+  .contact {
+    padding-bottom: 64px;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-info {
+    padding-right: 24px;
+  }
+
+  footer h2 {
+    margin-bottom: 16px;
+  }
+
+  address {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 @media (min-width: 1001px) {
+  body {
+    padding-top: 64px;
+  }
   h1 {
     font-size: 64px;
+    bottom: 0;
+    padding: 8px;
+    margin: 0;
   }
   h2 {
     font-size: 48px;
@@ -244,15 +370,62 @@ main .social {
     font-size: 24px;
   }
 
+  .hero-left {
+    grid-area: 1/1/4/2;
+    box-shadow: 2px 2px 10px 1px #555555;
+  }
+
+  .hero-left img {
+    height: 100%;
+  }
+
+  .hero-right {
+    font-size: 22px;
+    padding: 32px 32px 24px 24px;
+    grid-area: 2/2/3/3;
+    box-shadow: 2px 2px 8px 1px #555555;
+  }
+
+  .hero-right h2 {
+    margin-bottom: 24px;
+  }
+
+  .hero .social {
+    margin-top: 48px;
+    float: right;
+  }
+
+  .hero .social svg {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+  }
+
   .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 48px;
   }
 
+  .img-placeholder span {
+    font-size: 48px;
+  }
+
   footer,
   footer address,
-  .contact {
+  .contact a {
     font-size: 24px;
+  }
+
+  .contact {
+    padding-top: 64px;
+  }
+
+  .contact-info {
+    flex: 0 0 40%;
+  }
+
+  .contact img {
+    flex: 0 0 60%;
   }
 
   .contact svg {
@@ -260,8 +433,13 @@ main .social {
     height: 36px;
   }
 
+  footer .social {
+    margin-top: 32px;
+  }
+
   footer .social svg {
     width: 48px;
     height: 48px;
+    margin-right: 32px;
   }
 }
