@@ -1,7 +1,7 @@
 :root {
   --main-color: #0891b2;
   --heading-color: #000;
-  --text-color: rgb(85, 85, 85);
+  --text-color: #686665;
 }
 
 body {
@@ -35,7 +35,8 @@ footer p {
   color: #ffffff;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
 }
@@ -46,7 +47,8 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h2,
+h3 {
   color: var(--heading-color);
 }
 
@@ -71,7 +73,91 @@ img {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1180px;
+}
+
+footer .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social svg {
+  width: 24px;
+  height: 24px;
+}
+
+main .social {
+  float: right;
+}
+
+.contact svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cards {
+  display: grid;
+}
+
+.card {
+  box-shadow: 0 4px 8px #bdbdbd;
+}
+
+.img-placeholder {
+  position: relative;
+  z-index: 1;
+  content: "screenshot of project";
+  color: #fff;
+  width: 100%;
+  height: 260px;
+  background: red;
+  text-align: center;
+}
+
+.img-placeholder span {
+  position: absolute;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.img-placeholder img {
+  width: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.card:nth-child(1) .img-placeholder {
+  background-color: #9e1c1c;
+}
+
+.card:nth-child(2) .img-placeholder {
+  background-color: #7c75ca;
+}
+
+.card:nth-child(3) .img-placeholder {
+  background-color: #5e8f4d;
+}
+
+.card:nth-child(4) .img-placeholder {
+  background-color: #c363b4;
+}
+
+.card:nth-child(5) .img-placeholder {
+  background-color: #d88f39;
+}
+
+.card:nth-child(6) .img-placeholder {
+  background-color: #4ba2d2;
+}
+
+.card svg {
+  width: 24px;
+  height: 24px;
 }
 
 @media (max-width: 500px) {
@@ -95,20 +181,28 @@ img {
     margin-left: 24px;
   }
 
+  .cards {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+  }
+
   footer {
     padding-top: 24px;
   }
 
   h1 {
-    font-size: 56px;
+    font-size: 48px;
     bottom: 0;
     margin: 8px;
   }
 
   h2 {
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
     margin: 0 0 8px 0;
+  }
+  h3 {
+    font-size: 18px;
   }
 
   footer address,
@@ -118,5 +212,56 @@ img {
 
   footer p {
     font-size: 20px;
+  }
+
+  .contact svg {
+    display: none;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1000px) {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 48px;
+    row-gap: 56px;
+  }
+}
+
+@media (min-width: 1001px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  footer,
+  footer address,
+  .contact {
+    font-size: 24px;
+  }
+
+  .contact svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  footer .social svg {
+    width: 48px;
+    height: 48px;
   }
 }
