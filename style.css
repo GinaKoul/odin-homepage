@@ -1,5 +1,5 @@
 :root {
-  --main-color: #0891b2;
+  --main-color: #06566b;
   --heading-color: #000;
   --text-color: #686665;
 }
@@ -141,11 +141,11 @@ img {
 }
 
 .card:nth-child(5) .img-placeholder {
-  background-color: #d88f39;
+  background-color: #a66821;
 }
 
 .card:nth-child(6) .img-placeholder {
-  background-color: #4ba2d2;
+  background-color: #2a7ba7;
 }
 
 .card svg {
