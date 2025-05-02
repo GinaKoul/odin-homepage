@@ -57,6 +57,12 @@
           d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"
         ></path>
       </symbol>
+      <symbol id="external-link" viewBox="0 0 24 24">
+        <title>open-in-new</title>
+        <path
+          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+        />
+      </symbol>
       <symbol id="phone" viewBox="0 0 24 24">
         <title>phone</title>
         <path
@@ -72,44 +78,55 @@
         />
       </symbol>
     </svg>
-    <!-- <header class="container">
-      <h1>Ashley Williams</h1>
-      <picture>
-        <source media="(max-width:1000px)" srcset="./images/office-woman.webp">
-        <source media="(max-width:1000px)" srcset="./images/office-woman.jpg">
-        <source media="(min-width:1001px)" srcset="./images/office-woman-desktop.webp">
-        <img src="./images/office-woman-desktop.jpg" alt="Ashley Williams" />
-      </picture>
-    </header> -->
     <main class="container">
       <section class="hero">
-        <div class="hero-left">      
+        <div class="hero-left">
           <h1>Ashley Williams</h1>
           <picture>
-            <source media="(max-width:1000px)" srcset="./images/office-woman.webp">
-            <source media="(max-width:1000px)" srcset="./images/office-woman.jpg">
-            <source media="(min-width:1001px)" srcset="./images/office-woman-desktop.webp">
-            <img src="./images/office-woman-desktop.jpg" alt="Ashley Williams" />
+            <source
+              media="(max-width:500px)"
+              srcset="./images/office-woman.webp"
+            />
+            <source
+              media="(max-width:500px)"
+              srcset="./images/office-woman.jpg"
+            />
+            <source
+              media="(min-width:500px)"
+              srcset="./images/office-woman-desktop.webp"
+            />
+            <img
+              src="./images/office-woman-desktop.jpg"
+              alt="Ashley Williams"
+            />
           </picture>
         </div>
         <div class="hero-right">
           <h2>About me</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur.
           </p>
           <div class="social">
-              <a href="https://github.com/">
-                <svg aria-hidden="true">
-                  <use href="#github" /></svg></a>
-            <a href="https://linkedin.com/">
-              <svg aria-hidden="true"><use href="#linkedin-white" /></svg>
+            <a href="https://github.com/" target="_blank">
+              <svg aria-hidden="true">
+                <use href="#github" />
+              </svg>
             </a>
-            <a href="https://x.com/"><svg aria-hidden="true"><use href="#twitter" /></svg></a>
+            <a href="https://linkedin.com/" target="_blank">
+              <svg aria-hidden="true">
+                <use href="#linkedin-white" />
+              </svg>
+            </a>
+            <a href="https://x.com/" target="_blank">
+              <svg aria-hidden="true">
+                <use href="#twitter" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -118,65 +135,135 @@
         <div class="cards">
           <article class="card">
             <div class="img-placeholder">
-              <img src="" alt="">
+              <img src="" alt="" />
               <span>screenshot of project</span>
             </div>
+            <div class="card-social">
+              <a href="https://github.com/" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#external-link" />
+                </svg>
+              </a>
+            </div>
             <h3>Project name</h3>
-            <a href="https://github.com/">
-              <svg aria-hidden="true">
-                <use href="#github" /></svg></span
-          ></a>
-            <p>Short description of project. Just a couple sentences will do.</p>
+            <p>
+              Short description of project. Just a couple sentences will do.
+            </p>
           </article>
           <article class="card">
             <div class="img-placeholder">
-              <img src="" alt="">
+              <img src="" alt="" />
               <span>screenshot of project</span>
-            </div>            <h3>Project name</h3>
-            <a href="https://github.com/">
-              <svg aria-hidden="true">
-                <use href="#github" /></svg></a>
-            <p>Short description of project. Just a couple sentences will do.</p>
+            </div>
+            <div class="card-social">
+              <a href="https://github.com/" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#external-link" />
+                </svg>
+              </a>
+            </div>
+            <h3>Project name</h3>
+            <p>
+              Short description of project. Just a couple sentences will do.
+            </p>
           </article>
           <article class="card">
             <div class="img-placeholder">
-              <img src="" alt="">
+              <img src="" alt="" />
               <span>screenshot of project</span>
-            </div>            <h3>Project name</h3>
-            <a href="https://github.com/">
-              <svg aria-hidden="true">
-                <use href="#github" /></svg></a>
-            <p>Short description of project. Just a couple sentences will do.</p>
+            </div>
+            <div class="card-social">
+              <a href="https://github.com/" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#external-link" />
+                </svg>
+              </a>
+            </div>
+            <h3>Project name</h3>
+            <p>
+              Short description of project. Just a couple sentences will do.
+            </p>
           </article>
           <article class="card">
             <div class="img-placeholder">
-              <img src="" alt="">
+              <img src="" alt="" />
               <span>screenshot of project</span>
-            </div>            <h3>Project name</h3>
-            <a href="https://github.com/">
-              <svg aria-hidden="true">
-                <use href="#github" /></svg></a>
-            <p>Short description of project. Just a couple sentences will do.</p>
+            </div>
+            <div class="card-social">
+              <a href="https://github.com/" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#external-link" />
+                </svg>
+              </a>
+            </div>
+            <h3>Project name</h3>
+            <p>
+              Short description of project. Just a couple sentences will do.
+            </p>
           </article>
           <article class="card">
             <div class="img-placeholder">
-              <img src="" alt="">
+              <img src="" alt="" />
               <span>screenshot of project</span>
-            </div>            <h3>Project name</h3>
-            <a href="https://github.com/">
-              <svg aria-hidden="true">
-                <use href="#github" /></svg></a>
-            <p>Short description of project. Just a couple sentences will do.</p>
+            </div>
+            <div class="card-social">
+              <a href="https://github.com/" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#external-link" />
+                </svg>
+              </a>
+            </div>
+            <h3>Project name</h3>
+            <p>
+              Short description of project. Just a couple sentences will do.
+            </p>
           </article>
           <article class="card">
             <div class="img-placeholder">
-              <img src="" alt="">
+              <img src="" alt="" />
               <span>screenshot of project</span>
-            </div>            <h3>Project name</h3>
-            <a href="https://github.com/">
-              <svg aria-hidden="true">
-                <use href="#github" /></svg></a>
-            <p>Short description of project. Just a couple sentences will do.</p>
+            </div>
+            <div class="card-social">
+              <a href="https://github.com/" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="" target="_blank">
+                <svg aria-hidden="true">
+                  <use href="#external-link" />
+                </svg>
+              </a>
+            </div>
+            <h3>Project name</h3>
+            <p>
+              Short description of project. Just a couple sentences will do.
+            </p>
           </article>
         </div>
       </section>
@@ -195,28 +282,47 @@
           </address>
           <a href="tel:5555555555">
             <svg aria-hidden="true"><use href="#phone" /></svg>
-            555-555-5555
-          </a><br>
+            555-555-5555 </a
+          ><br />
           <a href="mailto:ashleywilliams.is.not.real@gmail.com">
             <svg aria-hidden="true"><use href="#email" /></svg>
             ashleywilliams.is.not.real@gmail.com
           </a>
           <div class="social">
-            <a href="https://github.com/">
+            <a href="https://github.com/" target="_blank">
               <svg aria-hidden="true">
-                <use href="#github" /></svg></span
-            ></a>
-            <a href="https://linkedin.com/">
-              <svg aria-hidden="true"><use href="#linkedin-blue" /></svg>
+                <use href="#github" />
+              </svg>
             </a>
-            <a href="https://x.com/"><svg aria-hidden="true"><use href="#twitter" /></svg></a>
+            <a href="https://linkedin.com/" target="_blank">
+              <svg aria-hidden="true">
+                <use href="#linkedin-blue" />
+              </svg>
+            </a>
+            <a href="https://x.com/" target="_blank">
+              <svg aria-hidden="true">
+                <use href="#twitter" />
+              </svg>
+            </a>
           </div>
         </div>
         <picture>
-          <source media="(max-width:1000px)" srcset="./images/office-woman-laptop.webp">
-          <source media="(max-width:1000px)" srcset="./images/office-woman-laptop.jpg">
-          <source media="(min-width:1001px)" srcset="./images/office-woman-laptop-desktop.webp">
-          <img src="./images/office-woman-laptop-desktop.jpg" alt="Ashley Williams" />
+          <source
+            media="(max-width:1000px)"
+            srcset="./images/office-woman-laptop.webp"
+          />
+          <source
+            media="(max-width:1000px)"
+            srcset="./images/office-woman-laptop.jpg"
+          />
+          <source
+            media="(min-width:1001px)"
+            srcset="./images/office-woman-laptop-desktop.webp"
+          />
+          <img
+            src="./images/office-woman-laptop-desktop.jpg"
+            alt="Ashley Williams"
+          />
         </picture>
       </section>
     </footer>

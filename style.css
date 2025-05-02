@@ -9,14 +9,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
   line-height: 1.5;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--text-color);
-  background-image: linear-gradient(165deg, var(--main-color) 50%, #ffffff 50%);
   background-repeat: no-repeat;
 }
 
@@ -32,10 +30,6 @@ header {
   max-width: 1190px;
   margin-left: 24px;
   margin-right: 24px;
-}
-
-.hero-left {
-  position: relative;
 }
 
 h1,
@@ -60,6 +54,10 @@ p {
   margin: 0 0 8px 0;
 }
 
+a[target="_blank"] {
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -67,8 +65,8 @@ img {
 
 /*Cards*/
 
-.cards-outer {
-  margin-top: 96px;
+.cards-outer h2 {
+  margin-bottom: 8px;
 }
 
 .cards {
@@ -76,18 +74,29 @@ img {
 }
 
 .card {
-  padding-bottom: 64px;
+  background-color: #fff;
   box-shadow: 0 4px 8px #bdbdbd;
 }
 
 .card h3 {
   margin-top: 16px;
   margin-left: 24px;
+  margin-bottom: 16px;
 }
 
 .card p {
   margin-left: 24px;
   margin-right: 24px;
+}
+
+.card-social {
+  float: right;
+  margin-top: 24px;
+  margin-right: 24px;
+}
+
+.card svg {
+  margin-left: 16px;
 }
 
 .img-placeholder {
@@ -153,21 +162,8 @@ footer {
   margin-top: 126px;
 }
 
-footer .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
 footer h2,
-footer p {
-  color: #ffffff;
-}
-
-footer address,
 footer a {
-  font-size: 14px;
   color: #ffffff;
 }
 
@@ -192,23 +188,41 @@ address {
       var(--main-color) 50%,
       #ffffff 50%
     );
-    background-size: 100% 34em;
+    background-size: 100% 38em;
+    font-size: 16px;
   }
 
-  header.container {
+  .hero {
     margin-top: 32px;
-    margin-right: 32px;
+  }
+
+  .hero-left {
+    position: relative;
+  }
+
+  .hero-left {
+    margin-right: 8px;
     margin-bottom: 32px;
-    margin-left: 32px;
+    margin-left: 8px;
+  }
+
+  .social {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .social svg {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .cards-outer {
+    margin-top: 72px;
   }
 
   .cards {
     grid-template-columns: 1fr;
     row-gap: 48px;
-  }
-
-  footer {
-    padding-top: 24px;
   }
 
   h1 {
@@ -222,8 +236,17 @@ address {
     font-size: 32px;
     margin: 0 0 16px 0;
   }
+
   h3 {
     font-size: 18px;
+  }
+
+  .card {
+    padding-bottom: 56px;
+  }
+
+  .card-social {
+    margin-top: 16px;
   }
 
   .img-placeholder {
@@ -234,13 +257,12 @@ address {
     font-size: 32px;
   }
 
-  footer h2 {
-    margin-bottom: 8px;
+  footer {
+    padding-top: 24px;
   }
 
-  footer address,
-  footer a {
-    font-size: 14px;
+  footer h2 {
+    margin-bottom: 8px;
   }
 
   address {
@@ -248,33 +270,109 @@ address {
     margin-bottom: 16px;
   }
 
+  footer .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   footer p {
     font-size: 20px;
+  }
+
+  .contact-info {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   .contact svg {
     display: none;
   }
+
+  .contact .social svg {
+    display: inline-block;
+  }
+
+  footer img {
+    margin-top: 48px;
+  }
 }
 
 @media (min-width: 501px) and (max-width: 1000px) {
+  body {
+    font-size: 20px;
+    background-image: linear-gradient(
+      162deg,
+      var(--main-color) 50%,
+      #ffffff 50%
+    );
+    background-size: 100% 44em;
+  }
+
+  .hero {
+    margin-top: 56px;
+  }
+
+  .hero {
+    position: relative;
+    margin-top: 190px;
+    background-color: #fff;
+    margin-left: 46px;
+    margin-right: 46px;
+  }
+
+  .hero-left {
+    margin-right: 24px;
+    max-width: 65%;
+    float: left;
+    margin-left: -15%;
+    margin-top: -130px;
+  }
+
+  .hero-right {
+    padding: 80px 24px 80px 24px;
+  }
+
+  .hero-right h2 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .hero-right .social {
+    display: none;
+  }
+
   .container {
     max-width: 700px;
   }
+
   h1 {
+    position: absolute;
     font-size: 56px;
+    right: -32px;
+    margin-top: 24px;
+    text-shadow: 1px 1px 5px #333;
   }
+
   h2 {
     font-size: 40px;
   }
+
   h3 {
     font-size: 20px;
+  }
+
+  .cards-outer {
+    margin-top: 72px;
   }
 
   .cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 48px;
     row-gap: 56px;
+  }
+
+  .card p {
+    font-size: 16px;
   }
 
   .img-placeholder {
@@ -285,10 +383,8 @@ address {
     font-size: 40px;
   }
 
-  footer,
-  footer address,
-  .contact a {
-    font-size: 18px;
+  footer {
+    margin-top: 264px;
   }
 
   .contact {
@@ -323,14 +419,13 @@ address {
 }
 
 @media (min-width: 501px) {
-  .hero {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    grid-template-rows: auto auto auto;
+  .hero-left img,
+  .hero-right {
+    box-shadow: 2px 2px 10px -2px #888888;
   }
 
-  .hero-right {
-    background-color: #fff;
+  .card {
+    padding-bottom: 64px;
   }
 
   .contact {
@@ -340,6 +435,13 @@ address {
   }
 
   .contact-info {
+    padding-right: 24px;
+  }
+
+  footer .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
     padding-right: 24px;
   }
 
@@ -355,35 +457,32 @@ address {
 
 @media (min-width: 1001px) {
   body {
+    font-size: 18px;
+    background-image: linear-gradient(
+      167deg,
+      var(--main-color) 50%,
+      #ffffff 50%
+    );
+    background-size: 100% 62em;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: auto auto auto;
     padding-top: 64px;
-  }
-  h1 {
-    font-size: 64px;
-    bottom: 0;
-    padding: 8px;
-    margin: 0;
-  }
-  h2 {
-    font-size: 48px;
-  }
-  h3 {
-    font-size: 24px;
   }
 
   .hero-left {
+    position: relative;
     grid-area: 1/1/4/2;
-    box-shadow: 2px 2px 10px 1px #555555;
-  }
-
-  .hero-left img {
-    height: 100%;
   }
 
   .hero-right {
     font-size: 22px;
     padding: 32px 32px 24px 24px;
     grid-area: 2/2/3/3;
-    box-shadow: 2px 2px 8px 1px #555555;
+    background-color: #fff;
   }
 
   .hero-right h2 {
@@ -399,6 +498,25 @@ address {
     width: 32px;
     height: 32px;
     margin-left: 16px;
+  }
+
+  h1 {
+    font-size: 64px;
+    bottom: 0;
+    padding: 8px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .cards-outer {
+    margin-top: 96px;
   }
 
   .cards {
