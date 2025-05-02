@@ -59,7 +59,9 @@ a[target="_blank"] {
 }
 
 img {
+  display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -78,25 +80,23 @@ img {
   box-shadow: 0 4px 8px #bdbdbd;
 }
 
-.card h3 {
-  margin-top: 16px;
-  margin-left: 24px;
-  margin-bottom: 16px;
-}
-
 .card p {
   margin-left: 24px;
   margin-right: 24px;
 }
 
-.card-social {
-  float: right;
-  margin-top: 24px;
-  margin-right: 24px;
+.card-row {
+  display: flex;
+  margin: 16px 24px;
+  align-items: center;
 }
 
-.card svg {
-  margin-left: 16px;
+.card-row svg {
+  margin: 8px 8px 0 8px;
+}
+
+.card-row h3 {
+  margin-right: auto;
 }
 
 .img-placeholder {
@@ -243,10 +243,6 @@ address {
 
   .card {
     padding-bottom: 56px;
-  }
-
-  .card-social {
-    margin-top: 16px;
   }
 
   .img-placeholder {
